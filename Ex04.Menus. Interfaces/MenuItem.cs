@@ -19,7 +19,7 @@ namespace Ex04.Menus.Interfaces
                get { return r_IsQuitItem; }
           }
 
-          public MenuItem (string i_ItemName)
+          public MenuItem(string i_ItemName)
           {
                r_Name = i_ItemName;
                r_IsQuitItem = false;

@@ -3,8 +3,7 @@ using System.Collections;
 using System.Text;
 
 namespace Ex04.Menus.Delegates
-{
-     
+{ 
      public class MenuItem
      {
           private readonly string r_Name;

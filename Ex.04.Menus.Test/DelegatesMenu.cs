@@ -24,33 +24,32 @@ namespace Ex04.Menus.Test
                showDateAndTime.Add(showTime);
                versionAndCapitalsMenu.Add(showVersion);
                versionAndCapitalsMenu.Add(countCapitals);
-               showDate.ItemActivated += ShowDate_OnActiveDelegate;
-               showTime.ItemActivated += ShowTime_OnActiveDelegate;
-               showVersion.ItemActivated += ShowVersion_OnActiveDelegate;
-               countCapitals.ItemActivated += CountCapitals_OnActiveDelegate;
+               showDate.ItemActivated += ShowDate_Operate;
+               showTime.ItemActivated += ShowTime_Operate;
+               showVersion.ItemActivated += ShowVersion_Operate;
+               countCapitals.ItemActivated += CountCapitals_Operate;
                m_MainMenu.Show();
           }
 
-          private void ShowDate_OnActiveDelegate()
+          private void ShowDate_Operate()
           {
                Methods methods = new Methods();
                methods.ShowDate();
-
           }
 
-          private void ShowTime_OnActiveDelegate()
+          private void ShowTime_Operate()
           {
                Methods methods = new Methods();
                methods.ShowTime();
           }
 
-          private void ShowVersion_OnActiveDelegate()
+          private void ShowVersion_Operate()
           {
                Methods methods = new Methods();
                methods.ShowVersion();
           }
 
-          private void CountCapitals_OnActiveDelegate()
+          private void CountCapitals_Operate()
           {
                Methods methods = new Methods();
                methods.CountCapitals();

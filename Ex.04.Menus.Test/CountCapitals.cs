@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using Ex04.Menus.Interfaces;
 using System.Text.RegularExpressions;
+using Ex04.Menus.Interfaces;
 
 namespace Ex04.Menus.Test
 {
      internal class CountCapitals : MenuItem, IExecutable
      {
-          public CountCapitals(string i_ItemName) : base (i_ItemName)
+          public CountCapitals(string i_ItemName) : base(i_ItemName)
           {
           }
 

@@ -23,7 +23,7 @@ namespace Ex04.Menus.Test
 
           public void CountCapitals()
           {
-               String userSentence;
+               string userSentence;
                int capitalsCounter = 0;
 
                Console.WriteLine("Please enter a sentence: ");
@@ -37,7 +37,7 @@ namespace Ex04.Menus.Test
                     }
                }
 
-               Console.WriteLine(String.Format(
+               Console.WriteLine(string.Format(
                     "The sentence: \"{0}\" contains {1} capital letters.",
                     userSentence,
                     capitalsCounter));

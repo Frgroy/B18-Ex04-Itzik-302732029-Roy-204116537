@@ -15,7 +15,12 @@ namespace Ex04.Menus.Delegates
           {
           }
 
-          public void doWhenItemActivated()
+          public void DoWhenOperated()
+          {
+               OnOperation();
+          }
+
+          protected virtual void OnOperation()
           {
                if (ItemActivated != null)
                {

@@ -11,8 +11,8 @@ namespace Ex04.Menus.Interfaces
           private const string k_Seperator = "--------------------------------------------------------------------";
           private const string k_IllegalInputMessage = "Illegal input.";
           private const bool k_isQuitItem = true;
-          private Dictionary<int, MenuItem> m_MenuItems = new Dictionary<int, MenuItem>();
           private readonly int r_Level;
+          private Dictionary<int, MenuItem> m_MenuItems = new Dictionary<int, MenuItem>();
 
           public Dictionary<int, MenuItem> MenuItems
           {

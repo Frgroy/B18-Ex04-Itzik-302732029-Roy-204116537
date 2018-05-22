@@ -14,6 +14,5 @@ namespace Ex04.Menus.Test
                interfacesMenu.Run();
                delegatesMenu.Run();
           }
-
      }
 }
