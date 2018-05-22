@@ -5,7 +5,7 @@ using Ex04.Menus.Interfaces;
 
 namespace Ex04.Menus.Test
 {
-     internal class ShowDate : MenuItem, IExecutable
+     public class ShowDate : MenuItem, IExecutable
      {
           public ShowDate(string i_ItemName) : base(i_ItemName)
           {

@@ -6,7 +6,7 @@ using Ex04.Menus.Interfaces;
 
 namespace Ex04.Menus.Test
 {
-     internal class CountCapitals : MenuItem, IExecutable
+     public class CountCapitals : MenuItem, IExecutable
      {
           public CountCapitals(string i_ItemName) : base(i_ItemName)
           {

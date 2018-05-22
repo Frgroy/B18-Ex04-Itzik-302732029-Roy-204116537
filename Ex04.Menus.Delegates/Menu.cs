@@ -12,11 +12,11 @@ namespace Ex04.Menus.Delegates
           private const string k_IllegalInputMessage = "Illegal input.";
           private const bool k_isQuitItem = true;
           private readonly int r_Level;
-          private Dictionary<int, MenuItem> m_MenuItems = new Dictionary<int, MenuItem>();
+          private readonly Dictionary<int, MenuItem> r_MenuItems = new Dictionary<int, MenuItem>();
 
           public Dictionary<int, MenuItem> MenuItems
           {
-               get { return m_MenuItems; }
+               get { return r_MenuItems; }
           }
 
           public int Level
@@ -42,7 +42,7 @@ namespace Ex04.Menus.Delegates
 
           public void Add(MenuItem i_MenuItem)
           {
-               m_MenuItems.Add(m_MenuItems.Count, i_MenuItem);
+               r_MenuItems.Add(r_MenuItems.Count, i_MenuItem);
           }
 
           public void Show()
@@ -56,7 +56,7 @@ namespace Ex04.Menus.Delegates
                     string userChoiceString = Console.ReadLine();
                     int userChoise;
                     Console.Clear();
-                    if (int.TryParse(userChoiceString, out userChoise) && m_MenuItems.ContainsKey(userChoise))
+                    if (int.TryParse(userChoiceString, out userChoise) && r_MenuItems.ContainsKey(userChoise))
                     {
                          handleKeyPressed(userChoise, ref isMenuActive);
                     }
@@ -76,9 +76,9 @@ namespace Ex04.Menus.Delegates
 
           private void printMenu()
           {
-               string choiceRequest = string.Format(@"Enter Selection or press {0}", m_MenuItems[0].Name);
+               string choiceRequest = string.Format(@"Enter Selection or press {0}", r_MenuItems[0].Name);
                Console.WriteLine(choiceRequest);
-               foreach (KeyValuePair<int, MenuItem> menuItem in m_MenuItems)
+               foreach (KeyValuePair<int, MenuItem> menuItem in r_MenuItems)
                {
                     Console.WriteLine(string.Format(@"[{0}] {1}", menuItem.Key, menuItem.Value.Name));
                }
@@ -86,8 +86,8 @@ namespace Ex04.Menus.Delegates
 
           private void handleKeyPressed(int userChoise, ref bool isMenuActive)
           {
-               Menu menu = m_MenuItems[userChoise] as Menu;
-               ActionItem action = m_MenuItems[userChoise] as ActionItem;
+               Menu menu = r_MenuItems[userChoise] as Menu;
+               ActionItem action = r_MenuItems[userChoise] as ActionItem;
 
                if (menu != null)
                {
@@ -97,7 +97,7 @@ namespace Ex04.Menus.Delegates
                {
                     action.DoWhenOperated();
                }
-               else if (m_MenuItems[userChoise].IsQuit)
+               else if (r_MenuItems[userChoise].IsQuit)
                {
                     isMenuActive = false;
                }

@@ -6,8 +6,8 @@ namespace Ex04.Menus.Interfaces
 {
      public class MenuItem
      {
-          private readonly string r_Name;
-          private readonly bool r_IsQuitItem;
+          protected readonly string r_Name;
+          protected readonly bool r_IsQuitItem;
 
           public string Name
           {

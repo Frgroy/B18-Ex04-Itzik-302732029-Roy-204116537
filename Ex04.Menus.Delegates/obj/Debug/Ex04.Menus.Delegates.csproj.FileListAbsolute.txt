@@ -1,0 +1,5 @@
+c:\users\user\documents\visual studio 2015\Projects\B18 Ex04 Itzik 302732029 Roy 204116537\Ex04.Menus.Delegates\bin\Debug\Ex04.Menus.Delegates.dll
+c:\users\user\documents\visual studio 2015\Projects\B18 Ex04 Itzik 302732029 Roy 204116537\Ex04.Menus.Delegates\bin\Debug\Ex04.Menus.Delegates.pdb
+c:\users\user\documents\visual studio 2015\Projects\B18 Ex04 Itzik 302732029 Roy 204116537\Ex04.Menus.Delegates\obj\Debug\Ex04.Menus.Delegates.csprojResolveAssemblyReference.cache
+c:\users\user\documents\visual studio 2015\Projects\B18 Ex04 Itzik 302732029 Roy 204116537\Ex04.Menus.Delegates\obj\Debug\Ex04.Menus.Delegates.dll
+c:\users\user\documents\visual studio 2015\Projects\B18 Ex04 Itzik 302732029 Roy 204116537\Ex04.Menus.Delegates\obj\Debug\Ex04.Menus.Delegates.pdb

@@ -29,6 +29,12 @@ namespace Ex04.Menus.Test
                Console.WriteLine("Please enter a sentence: ");
                userSentence = Console.ReadLine();
 
+               while (userSentence == string.Empty)
+               {
+                    Console.WriteLine("Illegal input. Try again.");
+                    userSentence = Console.ReadLine();
+               }
+
                foreach (char letter in userSentence)
                {
                     if (letter >= 'A' && letter <= 'Z')

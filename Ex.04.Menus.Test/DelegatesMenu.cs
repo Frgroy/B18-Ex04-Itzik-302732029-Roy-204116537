@@ -5,11 +5,11 @@ using Ex04.Menus.Delegates;
 
 namespace Ex04.Menus.Test
 {
-     internal class DelegatesMenu
+     public class DelegatesMenu
      {
           private MainMenu m_MainMenu = new MainMenu();
 
-          internal void Run()
+          public void Run()
           {
                Menu versionAndCapitalsMenu = new Menu("Version and Capitals", m_MainMenu.Menu.Level + 1);
                Menu showDateAndTime = new Menu("Show date/time", m_MainMenu.Menu.Level + 1);
