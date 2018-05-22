@@ -87,15 +87,15 @@ namespace Ex04.Menus.Delegates
           private void handleKeyPressed(int userChoise, ref bool isMenuActive)
           {
                Menu menu = m_MenuItems[userChoise] as Menu;
+               ActionItem action = m_MenuItems[userChoise] as ActionItem;
 
                if (menu != null)
                {
                     menu.Show();
                }
-               else if (m_MenuItems[userChoise] is IExecutable)
+               else if (action != null)
                {
-                    ((IExecutable)m_MenuItems[userChoise]).Execute();
-                    Console.WriteLine(k_Seperator);
+                    action.doWhenItemActivated();
                }
                else if (m_MenuItems[userChoise].IsQuit)
                {

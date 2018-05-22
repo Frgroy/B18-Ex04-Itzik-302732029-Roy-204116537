@@ -13,12 +13,8 @@ namespace Ex04.Menus.Test
 
           public void Execute()
           {
-               showTime();
-          }
-
-          private void showTime()
-          {
-               Console.WriteLine(DateTime.Now.ToShortTimeString());
+               Methods methods = new Methods();
+               methods.ShowTime();
           }
      }
 }

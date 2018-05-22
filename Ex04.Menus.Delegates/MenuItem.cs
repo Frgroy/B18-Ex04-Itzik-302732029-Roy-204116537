@@ -9,6 +9,7 @@ namespace Ex04.Menus.Delegates
      {
           private readonly string r_Name;
           private readonly bool r_IsQuitItem;
+
           public string Name
           {
                get { return r_Name; }
@@ -29,18 +30,6 @@ namespace Ex04.Menus.Delegates
           {
                r_Name = i_ItemName;
                r_IsQuitItem = i_IsQuit;
-          }
-
-          private void OnActive()
-          {              
-               if (OnActiveDelegate != null)
-               {
-                    OnActiveDelegate.Invoke();
-               }
-               else
-               {
-                    throw new Exception();
-               }
           }
      }
 }

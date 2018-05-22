@@ -13,12 +13,8 @@ namespace Ex04.Menus.Test
 
           public void Execute()
           {
-               showVersion();
-          }
-
-          private void showVersion()
-          {
-               Console.WriteLine("Version: 18.2.4.0");
+               Methods methods = new Methods();
+               methods.ShowVersion();
           }
      }
 }

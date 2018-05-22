@@ -13,47 +13,47 @@ namespace Ex04.Menus.Test
           {
                Menu versionAndCapitalsMenu = new Menu("Version and Capitals", m_MainMenu.Menu.Level + 1);
                Menu showDateAndTime = new Menu("Show date/time", m_MainMenu.Menu.Level + 1);
-               MenuItem showDate = new MenuItem("Show Date");
-               MenuItem showTime = new MenuItem("Show Time");
-               MenuItem showVersion = new MenuItem("Show Version");
-               MenuItem countCapitals = new MenuItem("Count Capitals");
+               ActionItem showDate = new ActionItem("Show Date");
+               ActionItem showTime = new ActionItem("Show Time");
+               ActionItem showVersion = new ActionItem("Show Version");
+               ActionItem countCapitals = new ActionItem("Count Capitals");
 
-               versionAndCapitalsMenu.OnActiveDelegate += VersionAndCapitalsMenu_OnActiveDelegate;
-               showDateAndTime.OnActiveDelegate += ShowDateAndTime_OnActiveDelegate;
-               showDate.OnActiveDelegate += ShowDate_OnActiveDelegate;
-               showTime.OnActiveDelegate += ShowTime_OnActiveDelegate;
-               showVersion.OnActiveDelegate += ShowVersion_OnActiveDelegate;
-               countCapitals.OnActiveDelegate += CountCapitals_OnActiveDelegate;
-          }
-
-          private void VersionAndCapitalsMenu_OnActiveDelegate()
-          {
-               
-          }
-
-          private void ShowDateAndTime_OnActiveDelegate()
-          {
-
+               m_MainMenu.Add(showDateAndTime);
+               m_MainMenu.Add(versionAndCapitalsMenu);
+               showDateAndTime.Add(showDate);
+               showDateAndTime.Add(showTime);
+               versionAndCapitalsMenu.Add(showVersion);
+               versionAndCapitalsMenu.Add(countCapitals);
+               showDate.ItemActivated += ShowDate_OnActiveDelegate;
+               showTime.ItemActivated += ShowTime_OnActiveDelegate;
+               showVersion.ItemActivated += ShowVersion_OnActiveDelegate;
+               countCapitals.ItemActivated += CountCapitals_OnActiveDelegate;
+               m_MainMenu.Show();
           }
 
           private void ShowDate_OnActiveDelegate()
           {
-               
+               Methods methods = new Methods();
+               methods.ShowDate();
+
           }
 
           private void ShowTime_OnActiveDelegate()
           {
-               
+               Methods methods = new Methods();
+               methods.ShowTime();
           }
 
           private void ShowVersion_OnActiveDelegate()
           {
-
+               Methods methods = new Methods();
+               methods.ShowVersion();
           }
 
           private void CountCapitals_OnActiveDelegate()
           {
-
+               Methods methods = new Methods();
+               methods.CountCapitals();
           }
      }
 }
